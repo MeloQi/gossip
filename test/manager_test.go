@@ -1,8 +1,8 @@
 package test
 
 import (
-	"github.com/stefankopieczek/gossip/transaction"
-	"github.com/stefankopieczek/gossip/transport"
+	"github.com/MeloQi/gossip/transaction"
+	"github.com/MeloQi/gossip/transport"
 	"testing"
 )
 
