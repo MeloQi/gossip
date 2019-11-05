@@ -243,10 +243,10 @@ func (mng *Manager) request(r *base.Request) {
 	}
 
 	// If we failed to correlate an ACK, just drop it.
-	if r.Method == base.ACK {
+/*	if r.Method == base.ACK {
 		log.Warn("Couldn't correlate ACK to an open transaction. Dropping it.")
 		return
-	}
+	}*/
 
 	// Create a new transaction
 	tx := &ServerTransaction{}
@@ -293,7 +293,7 @@ func (mng *Manager) request(r *base.Request) {
 	// but I'm not sure how to handle that situation right now.
 
 	// Pretend the user sent us a 100 to send.
-	trying := base.NewResponse(
+/*	trying := base.NewResponse(
 		"SIP/2.0",
 		100,
 		"Trying",
@@ -308,7 +308,7 @@ func (mng *Manager) request(r *base.Request) {
 	base.CopyHeaders("CSeq", tx.origin, trying)
 
 	tx.lastResp = trying
-	tx.fsm.Spin(server_input_user_1xx)
+	tx.fsm.Spin(server_input_user_1xx)*/
 
 	mng.requests <- tx
 }
