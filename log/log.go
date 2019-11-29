@@ -193,3 +193,7 @@ func SetDefaultLogLevel(level Level) {
 	}
 	defaultLogger.Level = level
 }
+
+func SetDefaultLoger(logger *Logger) {
+	defaultLogger = logger
+}
